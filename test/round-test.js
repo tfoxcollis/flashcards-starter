@@ -6,6 +6,12 @@ const Deck = require("../src/deck.js");
 const Turn = require("../src/turn.js");
 
 describe("Round", function() {
+//Global cards variable
+  var cards = [
+    new Card(1, "What is James' favorite color?", ["red", "blue", "green"], "red"),
+    new Card(2, "What is James' favorite food?", ["burrito", "donut", "pot pie"], "burrito"),
+    new Card(3, "What is James' favorite vacation destination?", ["Denmark", "Jamaica", "Anywhere with his wife"], "Anywhere with his wife" )
+  ]
 
   it("should be a function", () => {
 
@@ -13,15 +19,16 @@ describe("Round", function() {
   })
 
   it("should start with a deck", () => {
-    var cards = [
-      new Card(1, "What is James' favorite color?", ["red", "blue", "green"], "red"),
-      new Card(2, "What is James' favorite food?", ["burrito", "donut", "pot pie"], "burrito"),
-      new Card(3, "What is James' favorite vacation destination?", ["Denmark", "Jamaica", "Anywhere with his wife"], "Anywhere with his wife" )
-    ]
     const deck = new Deck(cards);
     const round = new Round(deck);
 
     expect(round.deck).to.deep.equal(deck.cards);
   })
 
+  it("should have method that returns the current card being played", () => {
+    const deck1 = new Deck(cards);
+    const round2 = new Round(deck1);
+
+    expect(round2.returnCurrentCard()).to.equal(cards[0]);
+  })
 })
