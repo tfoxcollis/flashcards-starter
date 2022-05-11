@@ -15,4 +15,10 @@ describe("turn", function(){
     expect(turn).to.be.an.instanceof(Turn);
   })
 
+  it("should have users guess to the question", () => {
+    const turn = new Turn("What is Disneyland?");
+
+    expect(turn.guess).to.equal("What is Disneyland?");
+  })
+
 })
