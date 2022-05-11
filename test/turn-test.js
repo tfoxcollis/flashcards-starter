@@ -50,18 +50,18 @@ describe("turn", function(){
   });
 
   it("should give feedback depending on correct or incorrect answer", () => {
-    let card = new Card(1, "What is the happiest place on earth?", ["the Beach", "Jamaica", "Disneyland"], "Disneyland");
-    let turn = new Turn("Disneyland", card);
+    let card1 = new Card(1, "What is the happiest place on earth?", ["the Beach", "Jamaica", "Disneyland"], "Disneyland");
+    let turn1 = new Turn("Disneyland", card1);
 
-    expect(turn.evaluateGuess()).to.deep.equal(true);
-    expect(turn.giveFeedback()).to.equal("Correct!");
+    expect(turn1.evaluateGuess()).to.deep.equal(true);
+    expect(turn1.giveFeedback()).to.equal("Correct!");
 
-    let card = new Card(1, "What is the happiest place on earth?", ["the Beach", "Jamaica", "Disneyland"], "the Beach");
-    let turn = new Turn("Disneyland", card);
+    let card2 = new Card(1, "What is the happiest place on earth?", ["the Beach", "Jamaica", "Disneyland"], "the Beach");
+    let turn2 = new Turn("Disneyland", card2);
 
-    expect(turn.evaluateGuess()).to.deep.equal(false);
-    expect(turn.giveFeedback()).to.equal("Incorrect!");
-    
+    expect(turn2.evaluateGuess()).to.deep.equal(false);
+    expect(turn2.giveFeedback()).to.equal("Incorrect!");
+
   })
 
 })
