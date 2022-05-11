@@ -17,7 +17,6 @@ describe("deck", function(){
     ]
     const deck = new Deck(cards);
 
-    expect(deck).to.have.key("cards");
     expect(deck.cards).to.deep.equal(cards);
   })
 
@@ -29,6 +28,6 @@ describe("deck", function(){
     ]
     const deck = new Deck(cards);
 
-    expect(deck.countCards).to.equal(3);
+    expect(deck.countCards()).to.equal(3);
   })
 })
