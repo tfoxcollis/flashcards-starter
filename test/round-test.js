@@ -44,5 +44,12 @@ describe("Round", function() {
     const round = new Round(deck);
 
     expect(round.incorrectGuesses).to.be.an.instanceOf(Array);
+  });
+
+  it("should be a method", () => {
+    const deck = new Deck(cards);
+    const round = new Round(deck);
+
+    expect(round.takeTurn).to.be.a("function")
   })
 })

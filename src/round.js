@@ -24,7 +24,6 @@ module.exports = Round
 
 
 //test for:
-// array for incorrectGuesses
 // turnCount being updated with each turnCount
 //    regardless of correct or incorrect answer (2 expects)
 //
