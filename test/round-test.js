@@ -40,8 +40,9 @@ describe("Round", function() {
   });
 
   it("should have an empty array to store incorrect guesses", () => {
-    const round = new Round();
+    const deck = new Deck(cards);
+    const round = new Round(deck);
 
-    expect(round.incorrectGuesses).to.equal([]);
+    expect(round.incorrectGuesses).to.be.an.instanceOf(Array);
   })
 })
