@@ -1,6 +1,7 @@
 const chai = require('chai');
 const expect = chai.expect;
 const Turn = require('../src/turn');
+const Card = require('../src/Card');
 
 describe("turn", function(){
 
@@ -19,6 +20,13 @@ describe("turn", function(){
     const turn = new Turn("What is Disneyland?");
 
     expect(turn.guess).to.equal("What is Disneyland?");
+  })
+
+  it("should have a card object for the current card in play", () => {
+    const card = new Card();
+    const turn = new Turn("question", card);
+
+    expect(turn.currentCard).to.equal(card);
   })
 
 })
