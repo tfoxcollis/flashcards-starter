@@ -29,4 +29,9 @@ describe("turn", function(){
     expect(turn.currentCard).to.equal(card);
   })
 
+  it("should have method that returns the guess", () => {
+    const turn = new Turn("What is Disneyland?");
+
+    expect(turn.returnGuess()).to.equal("What is Disneyland?")
+  })
 })
