@@ -57,7 +57,11 @@ describe("Round", function() {
     const deck = new Deck(cards);
     const round = new Round(deck);
 
-
+    round.takeTurn();
     expect(round.turnCount).to.equal(1)
+    round.takeTurn();
+    round.takeTurn();
+
+    expect(round.turnCount).to.equal(3);
   });
 })

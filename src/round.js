@@ -9,7 +9,7 @@ class Round{
     return this.deck[this.turnCount];
   }
   takeTurn() {
-  
+    this.turnCount++;
   }
 
 }
@@ -19,7 +19,6 @@ class Round{
 module.exports = Round
 
 // takeTurn method needs to:
-// update turn count
 // evaluate guesses
 //give giveFeedback
 // stores id of incorrect guesses
