@@ -51,7 +51,7 @@ describe("Round", function() {
 
 describe("round.takeTurn", function () {
 
-  it("should be a method", () => {
+  it("should be a function", () => {
     const deck = new Deck(cards);
     const round = new Round(deck);
 
@@ -103,5 +103,16 @@ describe("round.takeTurn", function () {
     var feedBack = round.takeTurn("pot pie");
     expect(feedBack).to.equal("Incorrect!");
 
-  })
+  });
+})
+
+describe("round.calculatePercentCorrect", function (){
+
+  it("should be a function", () => {
+    const deck = new Deck(cards);
+    const round = new Round(deck);
+
+    expect(round.calculatePercentCorrect()).to.be.a("function");
+  });
+
 })

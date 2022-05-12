@@ -9,7 +9,7 @@ class Round{
   returnCurrentCard(){
     return this.deck[this.turnCount];
   }
-  
+
   takeTurn(guess) {
     var turn = this.createTurn(guess);
     this.turnCount++;
@@ -25,9 +25,4 @@ class Round{
 
 }
 
-
-
 module.exports = Round
-
-// takeTurn method needs to:
-//give giveFeedback
