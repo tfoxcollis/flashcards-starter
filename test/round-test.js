@@ -49,7 +49,7 @@ describe("Round", function() {
   });
 });
 
-describe("Round.takeTurn", function () {
+describe("round.takeTurn", function () {
 
   it("should be a method", () => {
     const deck = new Deck(cards);
@@ -77,6 +77,12 @@ describe("Round.takeTurn", function () {
     expect(round.createTurn()).to.be.an.instanceOf(Turn);
   });
 
-  it("")
+  it("should add incorrect guess into incorrectGuesses array", () => {
+    const deck = new Deck(cards);
+    const round = new Round(deck);
+
+    round.takeTurn("blue")
+    expect(round.incorrectGuesses).to.equal([1])
+  })
 
 })
