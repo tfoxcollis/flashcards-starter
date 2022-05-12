@@ -32,6 +32,12 @@ class Round{
     return (correct / this.turnCount) * 100;
   }
 
+  endRound(){
+    var calculation = this.calculatePercentCorrect();
+    return `**Round Over!** You answered ${calculation}% of the questions correctly!`
+  }
+
+
 }
 
 module.exports = Round

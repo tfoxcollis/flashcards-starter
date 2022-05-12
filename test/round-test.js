@@ -137,6 +137,9 @@ describe("round.endRound", function () {
     const deck = new Deck(cards);
     const round = new Round(deck);
 
+    round.takeTurn("red");
+    round.takeTurn("pot pie");
+    round.calculatePercentCorrect();
     expect(round.endRound()).to.equal("**Round Over!** You answered 50% of the questions correctly!");
   })
 })
