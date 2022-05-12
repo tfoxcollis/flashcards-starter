@@ -123,3 +123,20 @@ describe("round.calculatePercentCorrect", function (){
     expect(round.calculatePercentCorrect()).to.equal(50)
   });
 })
+
+describe("round.endRound", function () {
+
+  it("should be a function", () => {
+    const deck = new Deck(cards);
+    const round = new Round(deck);
+
+    expect(round.endRound).to.be.a("function");
+  });
+
+  it("should print to the console at end of round", () => {
+    const deck = new Deck(cards);
+    const round = new Round(deck);
+
+    expect(round.endRound()).to.equal("**Round Over!** You answered 50% of the questions correctly!");
+  })
+})
