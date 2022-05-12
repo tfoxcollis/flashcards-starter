@@ -112,7 +112,7 @@ describe("round.calculatePercentCorrect", function (){
     const deck = new Deck(cards);
     const round = new Round(deck);
 
-    expect(round.calculatePercentCorrect()).to.be.a("function");
+    expect(round.calculatePercentCorrect).to.be.a("function");
   });
 
 })

@@ -23,6 +23,10 @@ class Round{
     return new Turn(guess, this.returnCurrentCard())
   }
 
+  calculatePercentCorrect() {
+    
+  }
+
 }
 
 module.exports = Round
