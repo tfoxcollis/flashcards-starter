@@ -44,6 +44,7 @@ describe("Round", function() {
     const round = new Round(deck);
 
     expect(round.incorrectGuesses).to.be.an.instanceOf(Array);
+    expect(round.incorrectGuesses).to.be.empty;
   });
 
   it("should be a method", () => {
@@ -64,4 +65,11 @@ describe("Round", function() {
 
     expect(round.turnCount).to.equal(3);
   });
+
+  it("should create new instance of Turn in takeTurn", () => {
+    const deck = new Deck(cards);
+    const round = new Round(deck);
+
+    expect(round.createTurn()).to.be.an.instanceOf(Turn);
+  })
 })

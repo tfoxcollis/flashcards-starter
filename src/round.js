@@ -1,3 +1,4 @@
+const Turn = require("../src/turn.js");
 class Round{
   constructor(deck){
     this.deck = deck.cards;
