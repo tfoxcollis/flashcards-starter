@@ -9,12 +9,14 @@ class Round{
   returnCurrentCard(){
     return this.deck[this.turnCount];
   }
+  
   takeTurn(guess) {
     var turn = this.createTurn(guess);
     this.turnCount++;
     if(!turn.evaluateGuess()){
       this.incorrectGuesses.push(turn.currentCard.id)
     }
+    return turn.giveFeedback();
   }
 
   createTurn(guess){
