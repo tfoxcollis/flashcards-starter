@@ -114,5 +114,12 @@ describe("round.calculatePercentCorrect", function (){
 
     expect(round.calculatePercentCorrect).to.be.a("function");
   });
+  it("should calculate percent of correct guesses", () => {
+    const deck = new Deck(cards);
+    const round = new Round(deck);
 
+    round.takeTurn("red");
+    round.takeTurn("pot pie");
+    expect(round.calculatePercentCorrect()).to.equal(50)
+  });
 })
