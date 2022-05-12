@@ -32,7 +32,7 @@ class Round{
   calculatePercentCorrect() {
     var correct = this.correctGuesses.length;
 
-    return (correct / this.turnCount) * 100;
+    return ((correct / this.turnCount) * 100).toFixed(0);
   }
 
   endRound(){
