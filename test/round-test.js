@@ -5,13 +5,14 @@ const Card = require("../src/card.js");
 const Deck = require("../src/deck.js");
 const Turn = require("../src/turn.js");
 
-describe("Round", function() {
 //Global cards variable
-  var cards = [
-    new Card(1, "What is James' favorite color?", ["red", "blue", "green"], "red"),
-    new Card(2, "What is James' favorite food?", ["burrito", "donut", "pot pie"], "burrito"),
-    new Card(3, "What is James' favorite vacation destination?", ["Denmark", "Jamaica", "Anywhere with his wife"], "Anywhere with his wife" )
-  ]
+var cards = [
+  new Card(1, "What is James' favorite color?", ["red", "blue", "green"], "red"),
+  new Card(2, "What is James' favorite food?", ["burrito", "donut", "pot pie"], "burrito"),
+  new Card(3, "What is James' favorite vacation destination?", ["Denmark", "Jamaica", "Anywhere with his wife"], "Anywhere with his wife" )
+]
+
+describe("Round", function() {
 
   it("should be a function", () => {
 
@@ -46,6 +47,9 @@ describe("Round", function() {
     expect(round.incorrectGuesses).to.be.an.instanceOf(Array);
     expect(round.incorrectGuesses).to.be.empty;
   });
+});
+
+describe("Round.takeTurn", function () {
 
   it("should be a method", () => {
     const deck = new Deck(cards);
@@ -71,5 +75,8 @@ describe("Round", function() {
     const round = new Round(deck);
 
     expect(round.createTurn()).to.be.an.instanceOf(Turn);
-  })
+  });
+
+  it("")
+
 })
