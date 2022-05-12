@@ -39,8 +39,6 @@ class Round{
     var calculation = this.calculatePercentCorrect();
     console.log(`**Round Over!** You answered ${calculation}% of the questions correctly!`);
   }
-
-
 }
 
 module.exports = Round

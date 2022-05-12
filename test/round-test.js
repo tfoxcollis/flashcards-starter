@@ -12,35 +12,35 @@ var cards = [
   new Card(3, "What is James' favorite vacation destination?", ["Denmark", "Jamaica", "Anywhere with his wife"], "Anywhere with his wife" )
 ]
 
+const deck = new Deck(cards);
+
 describe("Round", function() {
 
   it("should be a function", () => {
+    const round = new Round(deck);
 
     expect(Round).to.be.a("function");
   });
 
   it("should start with a deck", () => {
-    const deck = new Deck(cards);
     const round = new Round(deck);
+
     expect(round.deck).to.deep.equal(deck.cards);
   });
 
   it("should have method that returns the current card being played", () => {
-    const deck = new Deck(cards);
-    const round2 = new Round(deck);
+    const round = new Round(deck);
 
-    expect(round2.returnCurrentCard()).to.equal(cards[0]);
+    expect(round.returnCurrentCard()).to.equal(cards[0]);
   });
 
   it("should have a turn count that starts at 0", () => {
-    const deck = new Deck(cards);
     const round = new Round(deck);
 
     expect(round.turnCount).to.equal(0);
   });
 
   it("should have an empty array to store incorrect guesses", () => {
-    const deck = new Deck(cards);
     const round = new Round(deck);
 
     expect(round.incorrectGuesses).to.be.an.instanceOf(Array);
@@ -51,14 +51,12 @@ describe("Round", function() {
 describe("round.takeTurn", function () {
 
   it("should be a function", () => {
-    const deck = new Deck(cards);
     const round = new Round(deck);
 
     expect(round.takeTurn).to.be.a("function")
   });
 
   it("should update turnCount each turn", () => {
-    const deck = new Deck(cards);
     const round = new Round(deck);
 
     round.takeTurn();
@@ -70,14 +68,12 @@ describe("round.takeTurn", function () {
   });
 
   it("should create new instance of Turn in takeTurn", () => {
-    const deck = new Deck(cards);
     const round = new Round(deck);
 
     expect(round.createTurn()).to.be.an.instanceOf(Turn);
   });
 
   it("should add incorrect guess into incorrectGuesses array", () => {
-    const deck = new Deck(cards);
     const round = new Round(deck);
 
     round.takeTurn("blue");
@@ -85,7 +81,6 @@ describe("round.takeTurn", function () {
   });
 
   it("should not add correct guess into incorrectGuesses array", () => {
-    const deck = new Deck(cards);
     const round = new Round(deck);
 
     round.takeTurn("red");
@@ -93,7 +88,6 @@ describe("round.takeTurn", function () {
   });
 
   it("should return feedback depending on correct/incorrect guess", () => {
-    const deck = new Deck(cards);
     const round = new Round(deck);
 
     var feedBack = round.takeTurn("red");
@@ -108,25 +102,23 @@ describe("round.takeTurn", function () {
 describe("round.calculatePercentCorrect", function (){
 
   it("should be a function", () => {
-    const deck = new Deck(cards);
     const round = new Round(deck);
 
     expect(round.calculatePercentCorrect).to.be.a("function");
   });
+
   it("should calculate percent of correct guesses", () => {
-    const deck = new Deck(cards);
     const round = new Round(deck);
 
     round.takeTurn("red");
     round.takeTurn("pot pie");
-    expect(round.calculatePercentCorrect()).to.equal(50)
+    expect(round.calculatePercentCorrect()).to.equal("50")
   });
 })
 
 describe("round.endRound", function () {
 
   it("should be a function", () => {
-    const deck = new Deck(cards);
     const round = new Round(deck);
 
     expect(round.endRound).to.be.a("function");
