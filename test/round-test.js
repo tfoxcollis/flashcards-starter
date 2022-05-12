@@ -83,6 +83,14 @@ describe("round.takeTurn", function () {
 
     round.takeTurn("blue")
     expect(round.incorrectGuesses).to.deep.equal([1])
-  })
+  });
+
+  it("should not add correct guess into incorrectGuesses array", () => {
+    const deck = new Deck(cards);
+    const round = new Round(deck);
+
+    round.takeTurn("red")
+    expect(round.incorrectGuesses).to.deep.equal([]);
+  });
 
 })
