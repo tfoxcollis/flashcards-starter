@@ -13,6 +13,10 @@ class Round{
     this.turnCount++;
   }
 
+  createTurn(guess){
+    return new Turn(guess, this.returnCurrentCard())
+  }
+
 }
 
 
