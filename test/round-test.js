@@ -82,7 +82,7 @@ describe("round.takeTurn", function () {
     const round = new Round(deck);
 
     round.takeTurn("blue")
-    expect(round.incorrectGuesses).to.equal([1])
+    expect(round.incorrectGuesses).to.deep.equal([1])
   })
 
 })

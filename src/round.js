@@ -12,6 +12,9 @@ class Round{
   takeTurn(guess) {
     var turn = this.createTurn(guess);
     this.turnCount++;
+    if(!turn.evaluateGuess()){
+      this.incorrectGuesses.push(turn.currentCard.id)
+    }
   }
 
   createTurn(guess){
