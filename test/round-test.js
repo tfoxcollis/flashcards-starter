@@ -22,7 +22,6 @@ describe("Round", function() {
   it("should start with a deck", () => {
     const deck = new Deck(cards);
     const round = new Round(deck);
-
     expect(round.deck).to.deep.equal(deck.cards);
   });
 
@@ -133,13 +132,4 @@ describe("round.endRound", function () {
     expect(round.endRound).to.be.a("function");
   });
 
-  it("should print to the console at end of round", () => {
-    const deck = new Deck(cards);
-    const round = new Round(deck);
-
-    round.takeTurn("red");
-    round.takeTurn("pot pie");
-    round.calculatePercentCorrect();
-    expect(round.endRound()).to.equal("**Round Over!** You answered 50% of the questions correctly!");
-  })
 })
