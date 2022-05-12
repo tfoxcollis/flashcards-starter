@@ -28,12 +28,4 @@ class Round{
 module.exports = Round
 
 // takeTurn method needs to:
-// evaluate guesses
 //give giveFeedback
-// stores id of incorrect guesses
-
-
-//test for:
-// turnCount being updated with each turnCount
-//    regardless of correct or incorrect answer (2 expects)
-//

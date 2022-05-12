@@ -81,16 +81,27 @@ describe("round.takeTurn", function () {
     const deck = new Deck(cards);
     const round = new Round(deck);
 
-    round.takeTurn("blue")
-    expect(round.incorrectGuesses).to.deep.equal([1])
+    round.takeTurn("blue");
+    expect(round.incorrectGuesses).to.deep.equal([1]);
   });
 
   it("should not add correct guess into incorrectGuesses array", () => {
     const deck = new Deck(cards);
     const round = new Round(deck);
 
-    round.takeTurn("red")
+    round.takeTurn("red");
     expect(round.incorrectGuesses).to.deep.equal([]);
   });
 
+  it("should return feedback depending on correct/incorrect guess", () => {
+    const deck = new Deck(cards);
+    const round = new Round(deck);
+
+    var feedBack = round.takeTurn("red");
+    expect(feedBack).to.equal("Correct!");
+
+    var feedBack = round.takeTurn("pot pie");
+    expect(feedBack).to.equal("Incorrect!");
+
+  })
 })
