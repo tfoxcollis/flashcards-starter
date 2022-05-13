@@ -40,7 +40,7 @@ Running `node index.js` to play the game!
 - Ability for user to create their own card Deck
 - Randomize possible answers when being displayed
 
-## Contributor LinkedIn Profiles
+## Contributor LinkedIn Profile
 
 - [Trish Fox-Collis](https://www.linkedin.com/in/trish-fox-collis/)
 
