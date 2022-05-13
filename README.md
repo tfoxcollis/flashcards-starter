@@ -1,4 +1,16 @@
-# FlashCards Starter Kit
+# FlashCards Starter
+
+## Abstract
+
+With the Flashcard kit you can test your JS skills.  Click through 30 flashcards and see how you do!
+
+## Illustration
+
+![Demo](./flashcards.gif)
+
+## Technologies used
+
+- Javascript
 
 ## Fork This Repo
 
@@ -18,54 +30,24 @@ Once you have cloned the repo, change into the directory and install the library
 npm install
 ```
 
-To verify that it is setup correctly, run `npm test` in your terminal. You should have 5 pending tests in your `Card` test file that show up.
+To verify that it is setup correctly, run `npm test` in your terminal.
 
-Running `node index.js` from the root of your project should result in the following message being displayed in your terminal: 
+Running `node index.js` to play the game!
 
-```bash
-Your project is running...
-```
+## Future Features
 
-*Note that you will not need to you run your server until you are instantiating your `Game` class in Iteration 3. Prior to that, you should be using TDD to drive your code. You should check the functionality of your application by running your tests via `npm test`.*
+- Frontend build out to utilize this game in a GUI
+- Ability for user to create their own card Deck
+- Randomize possible answers when being displayed
 
+## Contributor LinkedIn Profiles
 
-## Where to Add Your Code
+- [Trish Fox-Collis](https://www.linkedin.com/in/trish-fox-collis/)
 
-### JavaScript
+## Other Work From the Contributor:
 
-**Create all of your feature code files in the `src` directory.**
+- [Trish Fox-Collis](https://github.com/tfoxcollis)
 
-We will be using the `module.exports` and `require` syntax to share code across files.
+### Project Specs
 
-## How to View Your Code in Action
-
-Once you are working through Iteration 3, you will want to start your server to test your functionality.
-In the terminal, run:
-
-```bash
-node index.js
-```
-
-When the game is functioning appropriately, you will be prompted for each question, have the opportunity to select an answer, and will be given feedback. You will be able to play through the entire deck of cards:
-
-![flash cards example gif](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
-
----
-
-## Test Files Organization
-
-Similar to feature code, your test code needs to be put in a specific place for it to run successfully.
-
-**Put all of your test files in the `test` directory.** As a convention, all test filenames should end with `-test.js`. For instance: `Round-test.js`.
-
-## Running Your Tests
-
-Run your test suite using the command:
-
-```bash
-npm test
-```
-
-The test results will output to the terminal.
-
-
+- The spec for this application can be found [here](https://frontend.turing.edu/projects/flash-cards.html)
